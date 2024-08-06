@@ -1,0 +1,27 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+</head>
+<body>
+    <h1>Welcome to the Flask App!</h1>
+    <form action="/process_text" method="post" enctype="multipart/form-data">
+        <label for="text">Enter text:</label><br>
+        <textarea name="text" id="text" rows="4" cols="50"></textarea><br><br>
+        <label for="file">Upload file:</label><br>
+        <input type="file" name="file" id="file"><br><br>
+        <label for="questionsInput">Questions:</label><br>
+        <textarea name="questionsInput" id="questionsInput" rows="4" cols="50"></textarea><br><br>
+        <label for="action">Select action:</label><br>
+        <select name="action" id="action">
+            <option value="headline">Generate Headline</option>
+            <option value="summarize">Summarize</option>
+            <option value="generateQuestions">Generate Questions</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
